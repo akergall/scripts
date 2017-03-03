@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap 101 Template</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/toastr.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Hi there!</h1>
+		<p>
+			Let's move some 'tr' 
+		</p>
+		<h3>Let's start!</h3>
+		<p><a href="../index.html">Led me back!</a></p>
+		<div>
+			<table class="table">
+				<thead>
+					<th>
+						Natural index
+					</th>
+					<th>
+						Col-Row information
+					</th>
+					<th>
+						Col-Row information
+					</th>
+					<th>
+						Move up/down
+					</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input type="text" value="1" disabled>
+						</td>
+						<td>
+							Col 1 - Row 1
+						</td>
+						<td>
+							Col 2 - Row 1
+						</td>
+						<td>
+							<div class="btn-group btn-group-xs" role="group" aria-label="...">
+  								<button type="button" class="btn btn-default moveUp">
+  									<span class="glyphicon glyphicon-chevron-up"></span>
+  								</button>
+  								<button type="button" class="btn btn-default moveDown">
+  									<span class="glyphicon glyphicon-chevron-down">
+  								</button>
+  							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" value="2" disabled>
+						</td>
+						<td>
+							Col 1 - Row 2
+						</td>
+						<td>
+							Col 2 - Row 2
+						</td>
+						<td>
+							<div class="btn-group btn-group-xs" role="group" aria-label="...">
+  								<button type="button" class="btn btn-default moveUp">
+  									<span class="glyphicon glyphicon-chevron-up"></span>
+  								</button>
+  								<button type="button" class="btn btn-default moveDown">
+  									<span class="glyphicon glyphicon-chevron-down">
+  								</button>
+  							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" value="3" disabled>
+						</td>
+						<td>
+							Col 1 - Row 3
+						</td>
+						<td>
+							Col 2 - Row 3
+						</td>
+						<td>
+							<div class="btn-group btn-group-xs" role="group" aria-label="...">
+  								<button type="button" class="btn btn-default moveUp">
+  									<span class="glyphicon glyphicon-chevron-up"></span>
+  								</button>
+  								<button type="button" class="btn btn-default moveDown">
+  									<span class="glyphicon glyphicon-chevron-down">
+  								</button>
+  							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" value="4" disabled>
+						</td>
+						<td>
+							Col 1 - Row 4
+						</td>
+						<td>
+							Col 2 - Row 4
+						</td>
+						<td>
+							<div class="btn-group btn-group-xs" role="group" aria-label="...">
+  								<button type="button" class="btn btn-default moveUp">
+  									<span class="glyphicon glyphicon-chevron-up"></span>
+  								</button>
+  								<button type="button" class="btn btn-default moveDown">
+  									<span class="glyphicon glyphicon-chevron-down">
+  								</button>
+  							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" value="5" disabled>
+						</td>
+						<td>
+							Col 1 - Row 5
+						</td>
+						<td>
+							Col 2 - Row 5
+						</td>
+						<td>
+							<div class="btn-group btn-group-xs" role="group" aria-label="...">
+  								<button type="button" class="btn btn-default moveUp">
+  									<span class="glyphicon glyphicon-chevron-up"></span>
+  								</button>
+  								<button type="button" class="btn btn-default moveDown">
+  									<span class="glyphicon glyphicon-chevron-down">
+  								</button>
+  							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootbox.min.js"></script>
+	<script src="../js/toastr.js"></script>
+	<script src="../js/custom.js"></script>
+	<script src="../scripts/moving.js"></script>
+	<script>
+		$(function(){
+			$("#activar").click(function(){
+				activity.showSuccess("");
+			});
+
+			$("#desactivar").click(function(){
+				activity.showInLineError($("#inline"));
+			});
+
+		});
+	</script>
+</body>
+</html>
