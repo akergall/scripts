@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Moving options</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/toastr.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Hi there!</h1>
+		<p>
+			Let's move some options!
+		</p>
+		<p>
+			Some times, we need to move and option from a select to other one, and here, we are going to learn how to doit
+		</p>
+		<h3>Let's start!</h3>
+		<p><a href="../index.html">Led me back!</a></p>
+		<div class="row" style="width: 80%; margin: 0 auto;">
+			
+			<legend>First example: just moving from here to there...</legend>
+			<div class="col-md-4">
+				<label for="selectOneMultiple">Use <strong>Ctrl + Click</strong> to select more than one element</label>
+				<select class="form-control" name="selectOne" id="selectOne">
+					<option value="1">Option one</option>
+					<option value="2">Option two</option>
+					<option value="3">Option three</option>
+					<option value="4">Option four</option>
+					<option value="5">Option five</option>
+				</select>
+			</div>
+			<div class="col-md-4">
+				
+				<div class="btn-group" role="group">
+					<button  class="btn btn-default" title="Move to right" id="moveToRight"><span class="glyphicon glyphicon-chevron-right"></span></button>
+					<button  class="btn btn-default" title="Move to right and keep" id="moveToRightk"><span class="glyphicon glyphicon glyphicon-step-forward"></span></button>
+					<button  class="btn btn-default" title="Move all to right " id="moveToRightAll"><span class="glyphicon glyphicon glyphicon glyphicon-fast-forward"></span></button>
+
+					<button  class="btn btn-default" title="Move to left" id="moveToLeft"><span class="glyphicon glyphicon-chevron-left"></span></button>
+					<button  class="btn btn-default" title="Move to left and keep" id="moveToLeftk"><span class="glyphicon glyphicon glyphicon-step-backward"></span></button>
+
+					<button  class="btn btn-default" title="Move all to left" id="moveToLeftAll"><span class="glyphicon glyphicon glyphicon glyphicon-fast-backward"></span></button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<label for="selectOneMultiple">Use <strong>Ctrl + Click</strong> to select more than one element</label>
+				<select class="form-control" name="selectTwo" id="selectTwo">
+				
+				</select>
+			</div>
+
+		</div>
+		<br>
+		<br>
+		<div class="row" style="width: 80%; margin: 0 auto;">
+			<legend>Second example: just moving from here to there in a multiple select...</legend>
+			<div class="col-md-4">
+			<label for="selectOneMultiple">Use <strong>Ctrl + Click</strong> to select more than one element</label>
+				<select multiple="" class="form-control" name="selectOneMultiple" id="selectOneMultiple">
+					<option disabled selected value="0">-Select an option-</option>
+					<option value="1">Option one</option>
+					<option value="2">Option two</option>
+					<option value="3">Option three</option>
+					<option value="4">Option four</option>
+					<option value="5">Option five</option>
+				</select>
+			</div>
+			<div class="col-md-4">
+				
+				<div class="btn-group" role="group">
+					<button  class="btn btn-default" title="Move to right" id="moveToRightMultiple"><span class="glyphicon glyphicon-chevron-right"></span></button>
+					<button  class="btn btn-default" title="Move to right and keep" id="moveToRightkMultiple"><span class="glyphicon glyphicon glyphicon-step-forward"></span></button>
+					<button  class="btn btn-default" title="Move all to right " id="moveToRightAllMultiple"><span class="glyphicon glyphicon glyphicon glyphicon-fast-forward"></span></button>
+
+					<button  class="btn btn-default" title="Move to left" id="moveToLeftMultiple"><span class="glyphicon glyphicon-chevron-left"></span></button>
+					<button  class="btn btn-default" title="Move to left and keep" id="moveToLeftkMultiple"><span class="glyphicon glyphicon glyphicon-step-backward"></span></button>
+
+					<button  class="btn btn-default" title="Move all to left" id="moveToLeftAllMultiple"><span class="glyphicon glyphicon glyphicon glyphicon-fast-backward"></span></button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<label for="selectTwoMultiple">Use <strong>Ctrl + Click</strong> to select more than one element</label>
+				<select multiple class="form-control" name="selectTwoMultiple" id="selectTwoMultiple">
+					<option disabled selected value="0">-Select an option-</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<h3>Explain</h3>
+			<ol>
+				<li><span class="glyphicon glyphicon-chevron-right"></span> Move an element, and remove it from the container select <small>from left to right</small></li>
+				<li><span class="glyphicon glyphicon-step-forward"></span> Move an element, but keep it in the container select <small>from left to right</small></li>
+				<li><span class="glyphicon glyphicon-fast-forward"></span> Move all elements to the other select <small>from left to right</small></li>
+				<li><span class="glyphicon glyphicon-chevron-left"></span> Move an element, an remove it from the container select <small>from rigth to left</small></li>
+				<li><span class="glyphicon glyphicon-step-backward"></span> Move an element, an remove it from the container select <small>from rigth to left</small></li>
+				<li><span class="glyphicon glyphicon-fast-backward"></span> Move an element, an remove it from the container select <small>from rigth to left</small></li>
+			</ol>
+		</div>
+	</div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootbox.min.js"></script>
+	<script src="../js/toastr.js"></script>
+	<script src="../js/custom.js"></script>
+	<script src="../scripts/movingSelected.js"></script>
+	<script>
+		$(function(){
+
+			// just for example, I'm going to divide calls in diferent functions,
+			// if you want to lear how to use just one call, you can see my other examples!
+			$("#moveToRight").click(function(){
+				var selectedOption = $("#selectOne option:selected");
+				moveToRight(selectedOption);
+			});
+			$("#moveToLeft").click(function(){
+				var selectedOption = $("#selectOne option:selected");
+				moveToLeft(selectedOption);
+			});
+			$("#moveToRightk").click(function(){
+				var selectedOption = $("#selectOne option:selected");
+				moveToRightk(selectedOption);
+			});
+			$("#moveToLeftk").click(function(){
+				var selectedOption = $("#selectOne option:selected");
+				moveToLeftk(selectedOption);
+			});
+			$("#moveToRightAll").click(function(){
+				moveToRightAll();
+			});
+			$("#moveToLeftAll").click(function(){
+				moveToLeftAll();
+			});
+
+
+			$("#moveToRightMultiple").click(function(){
+				var selectedOption = $("#selectOneMultiple option:selected");
+				moveToRightMultiple(selectedOption);
+			});
+			$("#moveToRightkMultiple").click(function(){
+				var selectedOption = $("#selectOneMultiple option:selected");
+				moveToRightkMultiple(selectedOption);
+			});
+			$("#moveToRightAllMultiple").click(function(){
+				var selectedOption = $("#selectOneMultiple option:selected");
+				moveToRightAllMultiple(selectedOption);
+			});
+			$("#moveToLeftMultiple").click(function(){
+				var selectedOption = $("#selectTwoMultiple option:selected");
+				moveToLeftMultiple(selectedOption);
+			});
+			$("#moveToLeftkMultiple").click(function(){
+				var selectedOption = $("#selectTwoMultiple option:selected");
+				moveToLeftkMultiple(selectedOption);
+			});
+			$("#moveToLeftAllMultiple").click(function(){
+				var selectedOption = $("#selectTwoMultiple option:selected");
+				moveToLeftAllMultiple(selectedOption);
+			});
+			
+			
+			
+
+		});
+	</script>
+</body>
+</html>

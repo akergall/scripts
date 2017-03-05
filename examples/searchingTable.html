@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Searching table</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/toastr.css">
+	<style>
+		.here{
+			background-color: rgba(0, 0, 255, 0.741);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Hi there!</h1>
+		<p>
+			Let's search for some elements!
+		</p>
+		<h3>Let's start!</h3>
+		<p><a href="../index.html">Led me back!</a></p>
+		<div style="width: 80%; margin: 0 auto;">
+		<legend>
+			Searching a chain and hiding who has not the chain
+		</legend>
+			<div>
+				<label for="search">Search: </label>
+				<input type="search" id="search">
+			</div>
+			<table id="searchTable" class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Last Name</th>
+						<th>Id</th>
+						<th>Job</th>
+						<th>City</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>John</td>
+						<td>Sotouth</td>
+						<td>657892</td>
+						<td>Journal</td>
+						<td>Madrid</td>
+					</tr>
+					<tr>
+						<td>Paula</td>
+						<td>Smith</td>
+						<td>896542</td>
+						<td>Professor</td>
+						<td>Buenos Aires</td>
+					</tr>
+					<tr>
+						<td>Shyrlie</td>
+						<td>Montalban</td>
+						<td>141552</td>
+						<td>Business assistant</td>
+						<td>Santiago</td>
+					</tr>
+					<tr>
+						<td>Maximo</td>
+						<td>Kergall</td>
+						<td>242655</td>
+						<td>Student</td>
+						<td>Santiago</td>
+					</tr>
+					<tr>
+						<td>Jhon</td>
+						<td>Stark</td>
+						<td>246321</td>
+						<td>Lawer</td>
+						<td>Madrid</td>
+					</tr>
+				</tbody>
+				
+
+			</table>
+			
+		</div>
+		<div style="width: 80%; margin: 0 auto;">
+			<legend>
+				Seraching a chain and standing up who match
+			</legend>
+			<div>
+			<label for="resaltSearch">search:</label>
+				<input type="search" id="resaltSearch">
+			</div>
+			<table id="resaltTable" class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Last Name</th>
+						<th>Id</th>
+						<th>Job</th>
+						<th>City</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>John</td>
+						<td>Sotouth</td>
+						<td>657892</td>
+						<td>Journal</td>
+						<td>Madrid</td>
+					</tr>
+					<tr>
+						<td>Paula</td>
+						<td>Smith</td>
+						<td>896542</td>
+						<td>Professor</td>
+						<td>Buenos Aires</td>
+					</tr>
+					<tr>
+						<td>Shyrlie</td>
+						<td>Montalban</td>
+						<td>141552</td>
+						<td>Business assistant</td>
+						<td>Santiago</td>
+					</tr>
+					<tr>
+						<td>Maximo</td>
+						<td>Kergall</td>
+						<td>242655</td>
+						<td>Student</td>
+						<td>Santiago</td>
+					</tr>
+					<tr>
+						<td>Jhon</td>
+						<td>Stark</td>
+						<td>246321</td>
+						<td>Lawer</td>
+						<td>Madrid</td>
+					</tr>
+				</tbody>
+				
+
+			</table>
+			
+		</div>
+	</div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootbox.min.js"></script>
+	<script src="../js/toastr.js"></script>
+	<script src="../js/custom.js"></script>
+	<script src="../scripts/searchingTable.js"></script>
+	<script>
+		$(function(){
+			
+		
+
+		});
+	</script>
+</body>
+</html>
