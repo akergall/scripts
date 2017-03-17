@@ -18,7 +18,10 @@
 		<p><a href="../index.html">Led me back!</a></p>
 		<div style="width: 80%; margin: 0 auto;">
 			<form>
-			<legend>Form</legend>
+			<legend>Counter</legend>
+			<p>
+				This is a simple character counter
+			</p>
   				<div class="form-group">
   				  <label for="inputText">Example text</label>
   				  <input maxlength="100" type="text" class="form-control" value="aaaaa" id="inputText" placeholder="Enter text">
@@ -39,7 +42,37 @@
     				<textarea maxlength="500" class="form-control" id="exampleTextarea" rows="3"></textarea>
     				<small>Current characters: <span class="currentCharacters"></span>, character remaining: <span class="charactersRemaining"></span></small>
   				</div> 
-  				<button type="submit" class="btn btn-primary">Submit</button>
+  				<button type="button" class="btn btn-primary">Submit</button>
+			</form>
+
+		</div>
+		<div style="width: 80%; margin: 0 auto;">
+			<form>
+			<legend>Counter two</legend>
+			<p>
+				Some times we can have some troubles with some browser, so, this is an adaptation of the first character counter. Here we don's use "maxlength", so we define a data-maxlength option.
+			</p>
+  				<div class="form-group">
+  				  <label for="inputText">Example text</label>
+  				  <input data-maxlength="100" type="text" class="form-control" value="aaaaa" id="inputText" placeholder="Enter text">
+  				  <small>Current characters: <span class="currentCharacters"></span>, character remaining: <span class="charactersRemaining"></span></small>
+  				</div>
+    			<div class="form-group">
+    				<label for="exampleTextarea">Example textarea</label>
+    				<textarea data-maxlength="500" class="form-control" id="exampleTextarea" rows="3"></textarea>
+    				<small>Current characters: <span class="currentCharacters"></span>, character remaining: <span class="charactersRemaining"></span></small>
+  				</div>  
+  				<div class="form-group">
+  				  <label for="inputText">Example text</label>
+  				  <input data-maxlength="100" type="text" class="form-control" id="inputText" placeholder="Enter text">
+  				  <small>Current characters: <span class="currentCharacters"></span>, character remaining: <span class="charactersRemaining"></span></small>
+  				</div>
+    			<div class="form-group">
+    				<label for="exampleTextarea">Example textarea</label>
+    				<textarea data-maxlength="500" class="form-control" id="exampleTextarea" rows="3"></textarea>
+    				<small>Current characters: <span class="currentCharacters"></span>, character remaining: <span class="charactersRemaining"></span></small>
+  				</div> 
+  				<button type="button" class="btn btn-primary">Submit</button>
 			</form>
 
 		</div>
@@ -58,6 +91,11 @@
 			$("[maxlength]").each(function(){
 				characterCounter($(this));
 			});
+			$("[data-maxlength]").each(function(){
+				characterCounterTwo($(this));
+			});
+
+		
 
 		});
 	</script>
